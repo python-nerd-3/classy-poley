@@ -64,7 +64,7 @@ function throwSound() {
 function mute() {
     if (!muted){
         music.volume = 0;
-        throwSoundEffect.volume=0.2;
+        throwSoundEffect.volume = 0.2;
     } else {
         if (music.volume != 1){
             music.volume += 0.5;
@@ -209,7 +209,5 @@ function changePoley() {
 }
 
 function startNotDisabled(){
-    setTimeout(() => {
-        notDisabled();
-    }, 5000);
+    setTimeout(notDisabled, 5000);
 }
