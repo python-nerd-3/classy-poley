@@ -1,10 +1,60 @@
 img {
-    width: 6rem;
     height: 6rem;
+    width: 6rem;
+    image-rendering: crisp-edges;
 }
 
 body {
     text-align: center;
-    background-color: #2C3333;
-    color: #CBE4DE;
+    background-color: #2d2e30;
+    color: white;
+}
+
+.offcanvas {
+    background-color: black;
+    display: flex;
+    overflow-y: scroll;
+}
+
+.offcanvas>img, .offcanvas>span {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
+
+.offcanvas>* {
+    color: white;
+}
+
+.sill {
+    filter: contrast(0)
+}
+
+.offcanvas>img {
+    border: solid 4px white;
+    padding: 5px;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1.5)
+    }
+    100% {
+        transform: scale(1)
+    }
+}
+
+.pop {
+    animation-name: pop;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+}
+
+#collectContainer {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #0d0e10;
+    padding: 10px;
 }

@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html>
 
 <head>
@@ -19,91 +19,29 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="game.js" async defer></script>
-
+    <link rel="icon" href="./poleys/classyPoley.png" type="image/png">
 </head>
 
 <body>
-    <h1>Poley mon moment</h1>
-    <img id="poleyimg" src="poleys/poley.png">
-    <button id="changePoley" onclick="changePoley(); startNotDisabled()">Collect Poley!</button>
-    <h3 id="poleygot">You just got:</h3>
+    <h1>Classy Poley</h1>
+    <div id="collectContainer">
+        <img id="poleyimg" src="poleys/poley.png">
+        <button id="changePoley" onclick="collect()">Collect Poley!</button>
+        <h3 id="poleygot"></h3>
+    </div>
     <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
-        aria-controls="offcanvasWithBothOptions">show poleys</button>
+        aria-controls="offcanvasWithBothOptions">Show Poleys</button>
     <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#shinyPoleys"
-        aria-controls="shinyPoleys">Show shinys</button>
-
+        aria-controls="shinyPoleys">Show Shiny Poleys</button>
+    <button type="button" class="btn btn-primary" onclick="writeSave()">Save</button>
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
         aria-labelledby="offcanvasWithBothOptionsLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Poley Backpack</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <div id="poleyCounter">
-                <img src="poleys/poleySill.png" alt="">
-                <h5>Poley</h5>
-            </div>
-            <div id="bugPoleyCounter">
-                <img src="poleys/bugPoleySill.png" alt="">
-                <h5>Bug Poley</h5>
-            </div>
-            <div id="calculatorPoleyCounter">
-                <img src="poleys/calculatorPoleySill.png" alt="">
-                <h5>Calculator Poley</h5>
-            </div>
-            <div id="deskPoleyCounter">
-                <img src="poleys/deskPoleySill.png" alt="">
-                <h5>Desk Poley</h5>
-            </div>
-            <div id="magicPoleyCounter">
-                <img src="poleys/magicPoleySill.png" alt="">
-                <h5>Magic Poley</h5>
-            </div>
-            <div id="poleCounter">
-                <img src="poleys/poleSill.png" alt="">
-                <h5>Pole</h5>
-            </div>
-            <div id="bobCounter">
-                <img src="poleys/bobSill.png" alt="">
-                <h5>Bob</h5>
-            </div>
-        </div>
+        <h1 id="poleysTitle">Poleys</h1>
     </div>
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="shinyPoleys"
         aria-labelledby="shinyPoleysLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Shiny Poley Backpack</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <div id="shinyPoleyCounter">
-                <img src="poleys/poleySill.png" alt="">
-                <h5>Shiny Poley</h5>
-            </div>
-            <div id="shinyBugPoleyCounter">
-                <img src="poleys/bugPoleySill.png" alt="">
-                <h5>Shiny Bug Poley</h5>
-            </div>
-            <div id="shinyCalculatorPoleyCounter">
-                <img src="poleys/calculatorPoleySill.png" alt="">
-                <h5>Shiny Calculator Poley</h5>
-            </div>
-            <div id="shinyDeskPoleyCounter">
-                <img src="poleys/deskPoleySill.png" alt="">
-                <h5>Shiny Desk Poley</h5>
-            </div>
-            <div id="shinyMagicPoleyCounter">
-                <img src="poleys/magicPoleySill.png" alt="">
-                <h5>Shiny Magic Poley</h5>
-            </div>
-            <div id="shinyPoleCounter">
-                <img src="poleys/poleSill.png" alt="">
-                <h5>Shiny Pole</h5>
-            </div>
-        </div>
+        <h1 id="shinyPoleysTitle">Shiny Poleys</h1>
     </div>
-    <button onclick="mute()">Volume?</button>
-    <input type="range" name="volume" id="volume" min="0" max="100">
 </body>
 
 </html>
