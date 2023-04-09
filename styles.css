@@ -62,4 +62,14 @@ body {
 
 .btn-close {
     position: absolute;
+    font-size: 30px;
+}
+
+.btn-close:hover {
+    color: white;
+}
+
+.btn-close:focus, .btn-close:active {
+    outline: none !important;
+    box-shadow: none;
 }
