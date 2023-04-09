@@ -121,13 +121,11 @@ function generateDisplays() {
         i = poleysObj[i]
         let displayText = `
             <img src="poleys/${i.name}.png" id="${i.name}Img" class="sill">
-            <br>
             <span id="${i.name}Counter">???</span>
         `
         $("#poleysTitle").after(displayText)
         let shinyDisplayText = `
-            <img src="poleys/shiny${i.name}.png" id="shiny${i.name}Img" class="sill"
-            <br>
+            <img src="poleys/shiny${i.name}.png" id="shiny${i.name}Img" class="sill">
             <span id="shiny${i.name}Counter">Shiny ???</span>
         `
         $("#shinyPoleysTitle").after(shinyDisplayText)

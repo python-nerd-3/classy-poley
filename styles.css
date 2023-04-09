@@ -11,7 +11,7 @@ body {
 }
 
 .offcanvas {
-    background-color: black;
+    background-color: #1d1e20;
     display: flex;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -26,6 +26,10 @@ body {
 
 .offcanvas>* {
     color: white;
+}
+
+.offcanvas>span {
+    margin-bottom: 20px;
 }
 
 .sill {
