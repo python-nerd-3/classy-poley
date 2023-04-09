@@ -14,6 +14,7 @@ body {
     background-color: black;
     display: flex;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .offcanvas>img, .offcanvas>span {
@@ -57,4 +58,8 @@ body {
     margin-bottom: 50px;
     background-color: #0d0e10;
     padding: 10px;
+}
+
+.btn-close {
+    position: absolute;
 }
