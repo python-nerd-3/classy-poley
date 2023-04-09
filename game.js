@@ -1,3 +1,4 @@
+function main() {
 let totalRarity = 100
 let poleysObj = {}
 
@@ -7,6 +8,12 @@ catchingMusic.loop = true
 let throwSfx = new Audio("./throw.mp3")
 throwSfx.volume = 0.7
 let shinySfx = new Audio("./shinyPoley.mp3")
+
+if (typeof running == "undefined") {
+    window.running = true
+} else {
+    window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+}
 
 function playsfx() {
     if (this.paused) {
@@ -178,3 +185,6 @@ if (document.cookie) {
 
 setInterval(writeSave, 10000)
 document.onbeforeunload = writeSave
+$("#changePoley").click(collect)
+}
+main()
