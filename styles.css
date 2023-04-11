@@ -1,7 +1,7 @@
 img {
     height: 6rem;
     width: 6rem;
-    image-rendering: crisp-edges;
+    image-rendering: pixelated;
 }
 
 body {
